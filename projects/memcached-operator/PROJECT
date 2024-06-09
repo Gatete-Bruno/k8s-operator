@@ -10,4 +10,14 @@ plugins:
   scorecard.sdk.operatorframework.io/v2: {}
 projectName: memcached-operator
 repo: github.com/Gatete-Bruno/k8s-operators
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: batman.example.com
+  group: cache
+  kind: Memcached
+  path: github.com/Gatete-Bruno/k8s-operators/api/v1alpha1
+  version: v1alpha1
 version: "3"

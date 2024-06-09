@@ -72,7 +72,9 @@ spec:
         - --leader-elect
         image: controller:latest
         name: manager
-        securityContext:
+        securityContext: 
+          runAsUser: 1000  # Non-root user ID
+          runAsNonRoot: true
           allowPrivilegeEscalation: false
           capabilities:
             drop:
